@@ -33,7 +33,7 @@ Fill in the sections below yourself, then:
 
 # [Microsoft AI Tour 2027](https://aitour.microsoft.com)
 
-## 🔥 BRKXXX: SESSION TITLE
+## 🔥 BRK390: Building AI applications with Microsoft Databases and Fabric
 
 ### Session description
 
