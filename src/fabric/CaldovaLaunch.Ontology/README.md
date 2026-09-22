@@ -55,16 +55,12 @@ are part of composite entity IDs remain the same property IDs and names, but are
 typed as `String` so the item can deploy. Non-key date properties continue to use
 `DateTime`.
 
-Verified against the daily Fabric ring on 2026-09-03 with fabio 0.71.0:
+The deployable shape was verified with fabio 0.71.0:
 
 ```bash
-export PATH="$HOME/.local/bin:$PATH"
-export FABIO_CLIENT_ID=04b07795-8ddb-461a-bbee-02f9e1bf7b46
-export FABIO_FABRIC_API_ENDPOINT=https://dailyapi.fabric.microsoft.com/v1
-
 fabio ontology create \
   --workspace <workspace-id> \
-  --name OntoConvProbe_20260903095606 \
+  --name CaldovaBusinessMeaning \
   --dir src/fabric/CaldovaLaunch.Ontology \
   -o json
 
@@ -74,7 +70,7 @@ fabio ontology list-entity-types \
   -o json
 ```
 
-The probe returned 26 entity types and was deleted immediately after validation.
+The verified definition contains 26 entity types.
 
 After creating the ontology, bind it to data sources:
 

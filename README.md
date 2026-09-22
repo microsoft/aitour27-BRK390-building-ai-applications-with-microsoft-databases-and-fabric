@@ -6,36 +6,39 @@
 
 # [Microsoft AI Tour 2027](https://aitour.microsoft.com)
 
-## 🔥 BRK390: Building AI applications with Microsoft Databases and Fabric
+## BRK390: Building AI applications with Microsoft Databases and Fabric
 
 ### Session description
 
-You want to ship agentic apps fast, but your data layer is fragmenting. Learn how Caldova used Azure SQL, Cosmos DB, PostgreSQL, Azure Managed Redis, & Microsoft Fabric to unify fragmented enterprise data & support agentic apps.
+Caldova is preparing a seasonal product launch while demand, weather signals,
+campaign plans, and production capacity are changing at the same time. This
+session shows how Microsoft Fabric, Fabric databases, governed semantic models,
+data agents, and a Fabric-embedded application turn those signals into an
+explainable recommendation, a controlled decision, and reusable business memory.
 
-### 🚀 Getting started
+All checked-in business records are synthetic and fictional. The deployment
+scripts create demonstration resources in Microsoft Fabric and must be used only
+with a reviewed, disposable workspace.
 
-#### In a guided session
+### Getting started
 
-If you're following along during a live session:
+#### During the session
 
-1. Step 1
-2. Step 2
-3. Open [`instructions/`](instructions/README.md) when this session includes
-   attendee step-by-step guidance
+1. Review the [scenario and data estate](data/README.md).
+2. Use the [attendee instructions](instructions/README.md) for the deployment
+   sequence and demo entry points.
+3. Follow the presenter for the governed demand, campaign, capacity, and
+   decision-memory walkthroughs.
 
 #### On your own
 
-Post-event attendee guidance will be added to
-[`instructions/`](instructions/README.md).
+1. Clone this repository to a machine with Node.js 24 or later and the Fabio
+   CLI.
+2. Prepare an empty or disposable Microsoft Fabric workspace where you can
+   create and load the required item types.
+3. Follow the complete [deployment and demo guide](instructions/README.md).
 
-If you're learning at your own pace:
-
-1. Clone this repository
-2. Set up your environment
-3. Follow the session guidance in [`instructions/`](instructions/README.md), or
-   use the linked docs-site entry point when this repository uses that pattern
-
-### 🎯 Learning outcomes
+### Learning outcomes
 
 By the end of this session, you will be able to:
 
@@ -43,14 +46,32 @@ By the end of this session, you will be able to:
 - Design a governed, unified data estate using Microsoft Fabric and Fabric IQ so agents answer with business meaning rather than generic output.
 - Select and combine Azure SQL, Cosmos DB and Azure HorizonDB to ground, retain and reuse the intelligence behind each decision.
 
-### 💻 Technologies used
+### Technologies used
 
-- Azure SQL
-- Cosmos DB
-- PostgreSQL
-- Microsoft Fabric
+| Technology | Role in the demos |
+|---|---|
+| Microsoft Fabric Lakehouse and OneLake | Store analytical tables, evidence files, evaluation assets, and decision records. |
+| Fabric SQL Database | Hosts the relational operational and decision-memory data. |
+| Fabric Real-Time Intelligence and Eventhouse | Stores and queries sales, weather, forecast, campaign, and production time series. |
+| Fabric IQ ontology and Direct Lake semantic model | Provide governed business meaning, relationships, measures, and agent grounding. |
+| Fabric data agent | Answers the session's commercial and operational questions from approved sources. |
+| Cosmos DB for NoSQL in Fabric | Optionally stores writable decision-case documents. |
+| Caldova Insights | Fabric-embedded React and Rayfin application for the commercial dashboard and analyst assistant. |
+| Fabio CLI | Validates, deploys, loads, and verifies the Fabric demo estate. |
 
-### 📚 Continue your learning
+### Repository contents
+
+| Path | Contents |
+|---|---|
+| [`data/`](data/README.md) | Deterministic synthetic dataset, generation tools, validation rules, and evaluation questions. |
+| [`src/fabric/`](src/fabric/) | Fabric ontology, semantic model, data-agent, and authored model source. |
+| [`src/caldova-insights/`](src/caldova-insights/README.md) | Fabric-embedded dashboard and analyst assistant. |
+| [`instructions/`](instructions/README.md) | Public deployment, verification, and demo-running steps. |
+| [`docs/`](docs/README.md) | Architecture, boundaries, and links to component references. |
+| [`infra/`](infra/README.md) | Resources created by the deployment scripts and the infrastructure boundary. |
+| [`delivery-resources/`](delivery-resources/README.md) | Presenter preflight, reset, fallback, and re-delivery guidance. |
+
+### Continue your learning
 
 Pick your next step based on your learning style:
 
@@ -60,7 +81,7 @@ Pick your next step based on your learning style:
 | **[AI Tour 2027 Resource Center](https://aka.ms/aitour27-resource-center)** | Additional session repos and materials from AI Tour 2027 |
 | **[Microsoft Foundry Community](https://aka.ms/MicrosoftFoundryDiscord-AITour27)** | Connect with other learners and experts in our Discord community |
 
-### 🌟 Microsoft Learn MCP Server
+### Microsoft Learn MCP Server
 
 <!-- Remove this section if the Microsoft Learn MCP Server is not relevant to the session. -->
 
@@ -77,7 +98,7 @@ copilot plugin install microsoftdocs/mcp
 
 For more information, visit the [Learn MCP Server repo](https://aka.ms/learnmcp).
 
-### 👥 Content owners
+### Content owners
 
 <table>
 <tr>
@@ -108,7 +129,7 @@ For more information, visit the [Learn MCP Server repo](https://aka.ms/learnmcp)
 Presenters and re-delivery partners can find the deck, recordings, presenter
 notes, and delivery guidance in [`delivery-resources/`](delivery-resources/README.md).
 
-### ⚖️ Trademarks
+### Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 

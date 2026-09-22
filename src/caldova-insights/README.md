@@ -144,21 +144,11 @@ npm run preview:layout
 npx rayfin up --workspace-uri "<Fabric workspace URL>"
 ```
 
-Pass the portal URL of the target ring — `rayfin up` derives both the workspace
-id **and the service endpoint** from it. Deploying to the internal daily ring
-therefore needs the daily host:
+Pass the public Fabric portal URL for the target workspace. `rayfin up` derives
+the workspace ID and service endpoint from that URL:
 
 ```bash
-npx rayfin up --workspace-uri "https://daily.fabric.microsoft.com/groups/<workspace-id>/list"
-```
-
-`rayfin secret set` has no equivalent option and always talks to production, so
-against a non-production ring it fails with a misleading
-`404 Could not found the requested item`. Override the endpoint for those calls:
-
-```bash
-export RAYFIN_FABRIC_API_URL="https://dailyapi.fabric.microsoft.com/v1"
-export RAYFIN_FABRIC_PORTAL_URL="https://daily.fabric.microsoft.com/"
+npx rayfin up --workspace-uri "https://app.fabric.microsoft.com/groups/<workspace-id>/list"
 ```
 
 Two further notes:

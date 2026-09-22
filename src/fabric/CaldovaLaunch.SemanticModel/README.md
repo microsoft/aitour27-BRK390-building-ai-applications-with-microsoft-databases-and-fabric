@@ -142,7 +142,5 @@ or after Delta table schema changes, run:
 fabio semantic-model refresh --workspace "$WORKSPACE_ID" --id "$SEMANTIC_MODEL_ID"
 ```
 
-On a non-production ring, `semantic-model refresh` and `semantic-model query`
-use the Power BI API surface and require
-`FABIO_POWERBI_ENDPOINT=https://dailyapi.powerbi.com/v1.0/myorg`; the Fabric
-endpoint is not used for those two commands.
+The signed-in identity must be able to access the semantic model through the
+public Fabric and Power BI service surfaces.
