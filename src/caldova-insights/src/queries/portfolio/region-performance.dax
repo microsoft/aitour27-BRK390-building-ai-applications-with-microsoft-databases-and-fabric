@@ -1,0 +1,30 @@
+// Regional contribution across the whole catalogue, with each region's
+// performance against the baseline plan over the same trailing window.
+DEFINE
+    VAR _Baseline =
+        MINX(ALL('ForecastActualDaily'[forecastVersion]), 'ForecastActualDaily'[forecastVersion])
+    VAR _MaxDate =
+        MAXX(ALL('ForecastActualDaily'[timestamp]), 'ForecastActualDaily'[timestamp])
+    VAR _Window =
+        FILTER(
+            ALL('ForecastActualDaily'[timestamp]),
+            'ForecastActualDaily'[timestamp] > _MaxDate - 60
+        )
+
+EVALUATE
+CALCULATETABLE(
+    SUMMARIZECOLUMNS(
+        'regions'[regionName],
+        "Actual Units", SUM('ForecastActualDaily'[actualUnits]),
+        "Plan Units", SUM('ForecastActualDaily'[forecastUnits]),
+        "Variance Pct",
+            DIVIDE(
+                SUM('ForecastActualDaily'[actualUnits])
+                    - SUM('ForecastActualDaily'[forecastUnits]),
+                SUM('ForecastActualDaily'[forecastUnits])
+            ) * 100
+    ),
+    'ForecastActualDaily'[forecastVersion] = _Baseline,
+    _Window
+)
+ORDER BY [Variance Pct] DESC

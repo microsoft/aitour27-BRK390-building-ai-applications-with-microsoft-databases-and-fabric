@@ -1,0 +1,29 @@
+// Portfolio headline metrics. The plan comparison is measured against the
+// baseline forecast version so the figure reflects performance against the
+// original commitment rather than a plan already revised to match actuals.
+DEFINE
+    VAR _Baseline =
+        MINX(ALL('ForecastActualDaily'[forecastVersion]), 'ForecastActualDaily'[forecastVersion])
+    VAR _MaxDate =
+        MAXX(ALL('ForecastActualDaily'[timestamp]), 'ForecastActualDaily'[timestamp])
+    VAR _PlanWindow =
+        FILTER(
+            ALL('ForecastActualDaily'),
+            'ForecastActualDaily'[forecastVersion] = _Baseline
+                && 'ForecastActualDaily'[timestamp] > _MaxDate - 60
+        )
+    VAR _ActualUnits = SUMX(_PlanWindow, 'ForecastActualDaily'[actualUnits])
+    VAR _PlanUnits = SUMX(_PlanWindow, 'ForecastActualDaily'[forecastUnits])
+
+EVALUATE
+ROW(
+    "Revenue USD", [Total Revenue USD],
+    "Units", [Total Units],
+    "Plan Variance Pct", DIVIDE(_ActualUnits - _PlanUnits, _PlanUnits) * 100,
+    "Products Tracked",
+        COUNTROWS(FILTER(ALL('products'), NOT ISBLANK('products'[productId]))),
+    "Active Campaigns",
+        COUNTROWS(FILTER(ALL('campaigns'), 'campaigns'[status] = "active")),
+    "Campaign Spend USD", [Campaign Spend USD],
+    "Campaign Revenue USD", [Campaign Revenue USD]
+)

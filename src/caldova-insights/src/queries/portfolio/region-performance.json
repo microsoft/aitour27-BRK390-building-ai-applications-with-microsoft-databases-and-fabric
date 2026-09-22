@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 210,
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "height": { "band": 0.62 }
+  },
+  "encoding": {
+    "y": {
+      "field": "regionName",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": {
+        "labelLimit": 130
+      }
+    },
+    "x": {
+      "field": "variancePct",
+      "type": "quantitative",
+      "title": "Variance vs plan (%)",
+      "axis": {
+        "format": ".1f",
+        "tickCount": 5
+      }
+    },
+    "tooltip": [
+      {
+        "field": "regionName",
+        "type": "nominal",
+        "title": "Region"
+      },
+      {
+        "field": "variancePct",
+        "type": "quantitative",
+        "title": "Vs plan",
+        "format": "+.2f"
+      },
+      {
+        "field": "actualUnits",
+        "type": "quantitative",
+        "title": "Actual units",
+        "format": ",.0f"
+      },
+      {
+        "field": "planUnits",
+        "type": "quantitative",
+        "title": "Plan units",
+        "format": ",.0f"
+      }
+    ]
+  }
+}

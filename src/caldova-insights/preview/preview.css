@@ -1,0 +1,5 @@
+/* Tailwind's automatic source detection is rooted at the Vite root, which is
+   `preview/` here, so the app sources must be registered explicitly or no
+   utility classes are generated for the previewed components. */
+@import "../src/global.css";
+@source "../src";

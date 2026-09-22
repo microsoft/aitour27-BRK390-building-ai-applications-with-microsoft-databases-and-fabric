@@ -1,0 +1,25 @@
+# Template for fabric.yaml, which is deliberately untracked because it holds
+# workspace-specific coordinates.
+#
+#   cp fabric.example.yaml fabric.yaml
+#
+# Then replace every <placeholder> below. The angle brackets are not valid ids:
+# leaving them in place fails at query time, not at parse time.
+#
+# Read the ids for a semantic model with either of:
+#   node node_modules/@microsoft/fabric-app-data-cli/dist/index.js add semanticModel <alias> --from-url "<Fabric portal URL>"
+#   node node_modules/@microsoft/fabric-app-data-cli/dist/index.js search "<name>" --json
+#
+# Add a profile per target workspace if you deploy to more than one, then switch
+# between them with:
+#   node node_modules/@microsoft/fabric-app-data-cli/dist/index.js use <profile> -o src/fabric.generated.ts
+#
+# Do not invoke this CLI through npx or node_modules/.bin — it exits 0 without
+# doing anything. See README.md for why.
+activeProfile: default
+profiles:
+  default:
+    semanticModels:
+      caldovaModel:
+        workspaceId: <workspace-id>
+        itemId: <semantic-model-item-id>
