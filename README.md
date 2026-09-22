@@ -1,30 +1,3 @@
-## Before you're done
-
-This repo has been created for your AI Tour 2027 session. Here's how to get it ready.
-
-**Easiest path — use the agent (recommended):**
-
-- Open GitHub Copilot Chat and say `help me initialize repo`. The agent will walk you through getting the README populated.
-- When you're ready to publish, say `help me finalize repo`. The agent will clean up unused folders, validate everything, and remove this "Before you're done" section and other extra stuff that attendees don't need to see.
-- Curious how it works? Read the [agent workflow](.github/AGENT-WORKFLOW.md).
-
-**Doing it manually?**
-
-Fill in the sections below yourself, then:
-
-- Delete any placeholder folders you don't need (`data/`, `infra/`, etc.)
-- Delete this "Before you're done" section
-- Delete `.github/agents/`, `.github/tests/`, `.github/copilot-instructions.md`, and `.github/AGENT-WORKFLOW.md` — these are template tooling, not part of your published repo
-
-**Folder conventions:**
-
-- Attendee step-by-step guidance goes in `instructions/`. If you use MkDocs or a docs site instead, put it in `docs/` and link to it from this README.
-- Reference material and background reading go in `docs/`.
-- Presenter notes, deck link, recordings, and re-delivery materials go in `delivery-resources/`. Fill in [`delivery-resources/README.md`](delivery-resources/README.md).
-- You can add a `.devcontainer/` folder if needed.
-
----
-
 <a name="start-building"></a>
 
 <p align="center">
@@ -37,7 +10,7 @@ Fill in the sections below yourself, then:
 
 ### Session description
 
-Add your session description here. Keep it concise — 2-3 sentences about what attendees will learn and why it matters.
+You want to ship agentic apps fast, but your data layer is fragmenting. Learn how Caldova used Azure SQL, Cosmos DB, PostgreSQL, Azure Managed Redis, & Microsoft Fabric to unify fragmented enterprise data & support agentic apps.
 
 ### 🚀 Getting started
 
@@ -52,6 +25,9 @@ If you're following along during a live session:
 
 #### On your own
 
+Post-event attendee guidance will be added to
+[`instructions/`](instructions/README.md).
+
 If you're learning at your own pace:
 
 1. Clone this repository
@@ -63,15 +39,16 @@ If you're learning at your own pace:
 
 By the end of this session, you will be able to:
 
-- Outcome 1
-- Outcome 2
-- Outcome 3
+- Explain why AI architectures leak organizational knowledge, and describe a six-step blueprint that retains it.
+- Design a governed, unified data estate using Microsoft Fabric and Fabric IQ so agents answer with business meaning rather than generic output.
+- Select and combine Azure SQL, Cosmos DB and Azure HorizonDB to ground, retain and reuse the intelligence behind each decision.
 
 ### 💻 Technologies used
 
-- Technology 1
-- Technology 2
-- Technology 3
+- Azure SQL
+- Cosmos DB
+- PostgreSQL
+- Microsoft Fabric
 
 ### 📚 Continue your learning
 
@@ -102,17 +79,27 @@ For more information, visit the [Learn MCP Server repo](https://aka.ms/learnmcp)
 
 ### 👥 Content owners
 
-<!-- TODO: Add yourself as a content owner
-1. Change the src in the image tag to {your github url}.png
-2. Change INSERT NAME HERE to your name
-3. Change the github url in the final href to your url. -->
-
 <table>
 <tr>
-    <td align="center"><a href="http://github.com/yourGitHubHandle">
-        <img src="https://github.com/yourGitHubHandle.png" width="100px;" alt="INSERT NAME HERE"/><br />
-        <sub><b>INSERT NAME HERE</b></sub></a><br />
-            <a href="https://github.com/yourGitHubHandle" title="talk">📢</a>
+    <td align="center"><a href="https://github.com/toolboc">
+        <img src="https://github.com/toolboc.png" width="100px;" alt="Paul DeCarlo"/><br />
+        <sub><b>Paul DeCarlo</b></sub></a><br />
+            <a href="https://github.com/toolboc" title="talk">📢</a>
+    </td>
+    <td align="center"><a href="https://github.com/sinedied">
+        <img src="https://github.com/sinedied.png" width="100px;" alt="Yohan Lasorsa"/><br />
+        <sub><b>Yohan Lasorsa</b></sub></a><br />
+            <a href="https://github.com/sinedied" title="talk">📢</a>
+    </td>
+    <td align="center"><a href="https://github.com/iemejia">
+        <img src="https://github.com/iemejia.png" width="100px;" alt="Ismael Mejia Useche"/><br />
+        <sub><b>Ismael Mejia Useche</b></sub></a><br />
+            <a href="https://github.com/iemejia" title="talk">📢</a>
+    </td>
+    <td align="center"><a href="https://github.com/videlalvaro">
+        <img src="https://github.com/videlalvaro.png" width="100px;" alt="Alvaro Videla Godoy"/><br />
+        <sub><b>Alvaro Videla Godoy</b></sub></a><br />
+            <a href="https://github.com/videlalvaro" title="talk">📢</a>
     </td>
 </tr></table>
 

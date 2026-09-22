@@ -1,17 +1,15 @@
 # Delivery resources
 
-<!-- AI TOUR TEMPLATE PLACEHOLDER: replace the required deck link before publication. Optional recording links can remain unavailable. -->
-
 Presenter, re-delivery, and train-the-trainer materials for this session.
 
 ## Core materials
 
 | Item | Link | Notes |
 |---|---|---|
-| Delivery deck |  | Required URL |
+| Delivery deck | [BRK390 delivery deck](https://aka.ms/brk390/slides) | Public session slides |
 | Session recording |  | Optional URL when available |
 | Attendee landing page | [Session README](../README.md) | Public starting point |
-| Workshop/lab instructions | [Instructions](../instructions/README.md) | Remove this row when not applicable |
+| Post-event attendee guidance | [Instructions](../instructions/README.md) | To be added later |
 
 ## Delivery checklist
 
@@ -43,4 +41,9 @@ Use this section for short setup reminders. Link to detailed setup notes if need
 
 ## Support
 
-Content owner or contact:
+Content owners:
+
+- [Paul DeCarlo (@toolboc)](https://github.com/toolboc)
+- [Yohan Lasorsa (@sinedied)](https://github.com/sinedied)
+- [Ismael Mejia Useche (@iemejia)](https://github.com/iemejia)
+- [Alvaro Videla Godoy (@videlalvaro)](https://github.com/videlalvaro)
