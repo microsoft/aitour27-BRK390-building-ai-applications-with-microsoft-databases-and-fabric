@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caldova | Campaign evidence</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><header><strong>CALDOVA</strong><span>Commercial intelligence</span><span class="pill">Azure HorizonDB</span></header>
+<main><p class="eyebrow">AGENT-ASSISTED MARKETING</p><h1>Hydration Sunscreen</h1>
+<p class="subtitle">Inspect the evidence behind Tim’s decision. Request and approve the plan in Copilot Cowork.</p>
+<form id="connect"><label>Campaign job ID<input id="job" required placeholder="Job ID from the agent response"></label>
+<label>Access token <small>(remote connections only; kept in memory)</small><input id="token" type="password" autocomplete="off"></label>
+<button>Open evidence</button></form><p id="status" role="status"></p>
+<nav><button data-tab="decision">Decision</button><button data-tab="workflow">AI pipelines</button><button data-tab="production">Production handoff</button></nav>
+<section id="decision" class="tab"><div id="metrics" class="metrics"></div><h2>Evaluated options</h2><div id="options"></div>
+<div id="risk" class="callout"></div><h2>Agent decision brief</h2><pre id="brief"></pre>
+<details><summary>Evidence snapshot and policy references</summary><pre id="evidence"></pre></details></section>
+<section id="workflow" class="tab" hidden><h2>AI Functions inside durable pipelines</h2>
+<p>Graphs and step definitions are read from HorizonDB. Select a step to inspect its model, input, and instruction.</p>
+<div id="pipelines"></div></section>
+<section id="production" class="tab" hidden><h2>Next: production capacity review</h2><div id="handoff"></div>
+<pre id="message"></pre><button id="copy" hidden>Copy message for Karin</button></section>
+</main><script src="/static/app.js"></script></body></html>

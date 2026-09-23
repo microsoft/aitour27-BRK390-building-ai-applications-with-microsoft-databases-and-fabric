@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+.azure/local/
+dist/
+.pytest_cache/
+.DS_Store
+plugin/connection.json
