@@ -22,6 +22,11 @@
 | `signalsKql` | `CaldovaSignals` | `KQLDatabase` | Attached data-agent source with uploadable few-shots | 6 of 11 tables | Exposes only raw time series used by the demos: forecast actuals, campaign signals, climate observations, weather forecasts/observations and line telemetry. |
 | `analyticsLakehouse` | `CaldovaAnalytics` | `Lakehouse` | Attached data-agent source with uploadable few-shots | 20 of 66 tables | Focuses on the five new Act 1 evidence tables plus dashboard variance/reconciliation, campaign/capacity, governed action and decision-memory Delta tables. |
 
+Demo numbers in this agent's answer contracts refer to the Fabric dataset
+walkthroughs. See [session order](../../../docs/session-order.md): the session's
+production Demo 3 belongs to Act 2, and Act 3 is the later workforce decision.
+The standalone Cowork/Teams/toolkit demos use a separate numerical variant.
+
 The Lakehouse evidence tables are essential because the data agent grounds best on tabular sources. They carry the advisory (`SIG-ENSO-2026-07`), decision-day briefing (`WX-BRIEF-20260803`), Meridian Climate Services attribution, and the five-hop evidence trace that used to exist only in JSONL documents.
 
 The ontology grounding story is still intact, but it now enters through the ontology surface rather than `data-agent add-datasource`. Use `fabio ontology search` for natural-language traversal over bound ontology data, or `fabio ontology mcp-url` when an IDE or orchestrating agent needs the ontology endpoint.

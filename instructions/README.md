@@ -171,12 +171,15 @@ You can also review the authored evaluation prompts and expected facts in:
 - [`data/evaluation/questions.json`](../data/evaluation/questions.json)
 - [`data/evaluation/expected-results.json`](../data/evaluation/expected-results.json)
 
-The four session demos cover:
+The four Fabric dataset walkthroughs cover the following topics. They are not
+four session acts; see [session order](../docs/session-order.md). For the recorded
+Act 2 implementation of Demos 2–4, use [Act 2 instructions](act2.md).
 
 1. Demand and weather evidence for Hydration Sunscreen.
 2. A governed campaign recommendation that still requires human approval.
 3. A production-capacity conflict and policy-constrained operating plan.
-4. Decision memory that preserves evidence, actions, corrections, and outcomes.
+4. The Fabric decision-memory and retrieval example. In the session's Act 2 Demo 4,
+   show retention only; new-session recall belongs to Act 3.
 
 Detailed model and agent references are available in:
 

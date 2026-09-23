@@ -50,7 +50,7 @@ The authored `model.bim` includes **46 Direct Lake tables**, **82 measures** and
 **71 relationships**. The decision-memory additions are `decision_cases`,
 `decision_case_states`, `decision_case_triggers`, `decision_case_policies`,
 `decision_case_campaigns`, `decision_corrections`, `decision_outcomes`, and
-`decision_case_actions`. They make Demo 4 answerable from the semantic model by
+`decision_case_actions`. They make the Fabric decision-memory walkthrough answerable from the semantic model by
 grounding past decisions, approvals, lessons learned, receipts and outcomes.
 `decision_case_campaigns` is a bridge table, because the 2027 Hydration
 Sunscreen case concerns four signal-affected campaigns rather than one, and it

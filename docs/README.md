@@ -37,6 +37,8 @@ remain explicit parts of the scenario.
 
 ## Reference map
 
+- [Canonical session order, acts, and demo numbering](session-order.md)
+
 The [Act 2 architecture](act2.md) documents an additional standalone Azure variant
 and its numerical boundary with the frozen Fabric contract. Its marketing approval
 and production actions are writable, unlike the read-oriented analytical surfaces

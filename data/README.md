@@ -60,6 +60,13 @@ The outcome slice restores the approved commitment, executed governed actions an
 
 ## Story encoded by the data
 
+The table below describes the **Fabric dataset walkthroughs**, including legacy
+production and retrieval examples. Session ordering is defined in
+[session order and demo numbering](../docs/session-order.md): Demos 2–4 are all
+in Act 2; Act 3 is the later workforce decision. The standalone Act 2 variant has
+its own fixtures. Demo 4's session recording stops at retention, even though this
+dataset also contains retrieval probes and optional generated outcomes.
+
 | Demo | Data support | Stage-critical values |
 | --- | --- | --- |
 | **Demo 1: Commercial command centre** | Hydration Sunscreen (`PROD-HS-100`) runs above forecast in four of six regions. The external signal (`SIG-ENSO-2026-07`) is attributed in the payload to Meridian Climate Services (`WX-MCS-001`, short name `MCS`) and backed by approved demand-response model `WXMODEL-UPLIFT-001`: `upliftPct = 8.0 * uvIndexAnomaly + 3.4 * temperatureMeanAnomalyC`. The coefficients are global, so regional uplift differences come from regional weather differences. `weather-demand-reconciliation.csv` shows modelled uplift equal to actual sales variance with `difference_pct = 0` in all six regions. Evidence uses two tiers: the `2026-08-03` 30-day forecast covers `2026-08-04` through `2026-09-02`, while the ENSO seasonal outlook at 78% persistence carries the claim through `2026-11-26`. | 4 affected regions; 100,000 incremental units; $800,000 opportunity at $8/unit; baseline forecast `2026.07.20-1`; affected variances and modelled weather uplift: Coastal 31.4%, Southern 26.8%, Island 22.5%, Delta 18.9%; controls: Northern 1.2%, Central -0.8%; variance window `2026-06-22` through `2026-08-02`; decision-day forecast issue `2026-08-03`; 30-day horizon end `2026-09-02`; campaign `2026-08-17` through `2026-10-02`; seasonal persistence through `2026-11-26` at 78%. |
@@ -136,7 +143,7 @@ The remaining three tables exist for a different reason: **latency**. The data a
 | --- | ---: | --- |
 | `demand_signal_explanation` | 6 | Act 1: variance, modelled weather uplift, UV and temperature anomaly, the advisory and its provider, persistence probability, and the forecast horizon against the campaign window. One row per region, including the two control regions that separate signal from noise. |
 | `campaign_decision_status` | 3 | Act 2: which scenario is recommended, whether any is approved, and the commitment, governed-action and receipt counts that show the decision is still open. |
-| `capacity_conflict_summary` | 4 | Act 3: shortfall, headroom, the maintenance window and its deferral, and projected stress against the policy ceiling. One row per production option. |
+| `capacity_conflict_summary` | 4 | Fabric walkthrough 3 (production conflict): shortfall, headroom, the maintenance window and its deferral, and projected stress against the policy ceiling. One row per production option. This is not the session's Act 3 workforce demonstration. |
 
 Every value in them is derived from the same contract the rest of the dataset comes from, and the validator asserts they reproduce it — the frozen 57,920 shortfall, 28-day deferral, 111.26% stress and 0.78 persistence, plus the rule that the forecast horizon must stop short of the campaign end. They are convenience projections, not a second source of truth.
 

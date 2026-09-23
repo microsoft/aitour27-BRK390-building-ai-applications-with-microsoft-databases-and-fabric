@@ -43,29 +43,34 @@ Presenter, re-delivery, and train-the-trainer materials for this session.
 
 ## Run of show
 
-Use the final deck as the timing authority once its public URL is supplied. The
-technical demo order is:
+Use the [delivery deck](https://aka.ms/brk390/slides) as the timing authority and
+the [session-order reference](../docs/session-order.md) for act/demo terminology.
 
-1. **Commercial signal:** show the Hydration Sunscreen demand variance, affected
-   regions, weather evidence, and persistence horizon.
-2. **Recommendation to commitment:** compare scenarios and emphasize that the
-   recommended plan still requires human approval.
-3. **Production conflict:** show the `PKG-02` maintenance constraint, the
-   57,920-unit shortfall, and the policy-compliant operating option.
-4. **Decision memory:** show how evidence, actions, receipts, corrections, and
-   outcomes can be retrieved for a later decision.
+1. **Act 1 / Demo 1 — See and understand:** show Hydration Sunscreen demand variance,
+   affected regions, weather evidence and persistence through Caldova Insights.
+2. **Act 2 / Demo 2 — Decide:** Tim asks Cowork to compare campaign scenarios, reviews
+   evidence and approves an exact marketing forecast in HorizonDB.
+3. **Act 2 / Demo 3 — Act:** Karin investigates the production dependency in Teams,
+   preserves maintenance and existing orders, and approves a calculated revision.
+4. **Act 2 / Demo 4 — Remember:** show the decision case and toolkit-derived memory
+   in Cosmos DB. End at retention with actual production outcome pending.
+5. **Act 3 — Improve:** retrieve prior experience for the next workforce decision
+   and check it against current Azure SQL policy and capacity. This later
+   implementation is not part of the imported Act 2 component.
 
-The default data intentionally stops before the hero decision is approved. Do
-not switch to the outcome slice until the narrative calls for the reveal.
+The Fabric default data stops before hero approval. Its optional outcome and
+retrieval slices are dataset examples, not evidence of the standalone Act 2
+decision's actual production outcome. Do not reveal recall in Demo 4.
 
 ## Demo reproducibility
 
 ### Standalone Act 2 recording variant
 
-The sequence above describes the original Fabric contract. The imported
+For Demos 2–4, the imported
 [Act 2 variant](../docs/act2.md) uses **USD 30,000 / 57,000 extra units**, **PKG-03**,
 and **MW-77 days 6–10**. Its production response preserves maintenance rather than
-deferring it. Do not describe those figures as the same case as the Fabric
+deferring it. The original Fabric walkthrough instead uses `PKG-02` and a
+57,920-unit shortfall. Do not describe the imported figures as the same case as the Fabric
 100,000-unit campaign and 57,920-unit shortfall.
 
 Prepare the variant using [Act 2 setup](../instructions/act2.md). Its recording order:

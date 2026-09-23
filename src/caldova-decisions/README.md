@@ -8,6 +8,10 @@ the existing Fabric scenario uses different regions, numbers, and production rul
 
 ## Demo sequence
 
+These three demos all belong to Act 2; Demo 3 is not Act 3. See the
+[session-order reference](../../docs/session-order.md). Act 3's later workforce
+decision retrieves memory; Demo 4 here only retains it.
+
 | Demo | Experience | Implementation |
 | --- | --- | --- |
 | 2: Decide | Tim asks a Cowork agent to compare campaign investments and approves an exact forecast | [Campaign tools and plugin](plugin/README.md), `app/`, SQL 50–60 |
@@ -31,7 +35,7 @@ uv sync --locked --group dev
 cp .env.example .env
 # Edit .env. Set PGHOST, PGDATABASE=postgres, PGUSER and PGSSLMODE=require.
 # Supply the PostgreSQL password through ~/.pgpass, mode 600.
-uv run --env-file .env python scripts/deploy-database.py
+uv run --env-file .env psql -X -w -f sql/05-extensions.sql
 ```
 
 Register the model on a fresh database before running the walkthrough:
@@ -41,6 +45,7 @@ uv run --env-file .env python scripts/register-model.py \
   --subscription YOUR_SUBSCRIPTION_ID \
   --resource-group YOUR_FOUNDRY_RESOURCE_GROUP \
   --account YOUR_FOUNDRY_ACCOUNT
+uv run --env-file .env python scripts/deploy-database.py
 uv run --env-file .env python scripts/walkthrough.py \
   --case-id HYDRATION-SUNSCREEN-CAMPAIGN-001 --approve
 ```

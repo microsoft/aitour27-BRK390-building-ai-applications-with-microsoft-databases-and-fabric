@@ -22,6 +22,14 @@ with a reviewed, disposable workspace.
 
 ### Getting started
 
+#### Session order
+
+**Act 1:** Demo 1, see and understand demand. **Act 2:** Demo 2, marketing approval;
+Demo 3, production response in Teams; Demo 4, retain decision memory. **Act 3:**
+reuse that memory for the next workforce decision with current policy and capacity.
+See [session order and numbering](docs/session-order.md). The Act 3 workforce
+implementation is not included in this Act 2 import.
+
 #### Choose your demo path
 
 The [Fabric scenario](data/README.md) and the [standalone Act 2 variant](docs/act2.md)

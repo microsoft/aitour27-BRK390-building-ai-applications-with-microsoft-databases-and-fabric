@@ -1,5 +1,8 @@
 # Act 2: decide, act, and remember
 
+Act 2 contains **Demos 2, 3, and 4**. See [session order](session-order.md) for the
+transition from Act 1 and the later Act 3 workforce decision.
+
 This additive contribution introduces [Caldova decisions](../src/caldova-decisions/README.md):
 an agent-led campaign workflow in Azure HorizonDB, a Teams Factory Planning Agent,
 and decision capture through Agent Memory Toolkit into Azure Cosmos DB for NoSQL.

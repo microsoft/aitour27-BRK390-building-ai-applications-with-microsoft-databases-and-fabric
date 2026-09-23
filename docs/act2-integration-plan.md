@@ -20,7 +20,7 @@ No cloud resources or live data were changed during integration. The contributio
 is organized as three implementation commits and a session documentation commit;
 no push or pull request is included.
 
-## Agreed scope
+## Initial scope (historical; superseded above)
 
 Import the tested Act 2 implementation from `aitour26-brk290-act2` into this
 session repository. Preserve it as an explicitly separate scenario variant.
@@ -89,7 +89,7 @@ units or automatically map the region names. The conceptual transition is shared
 Use the imported scenario consistently for the recorded slide-20/24/26 segment.
 Retrieval and the next workforce decision remain Act 3; Demo 4 ends at retention.
 
-## Implementation phases
+## Initial implementation phases (historical)
 
 ### 1. Inventory and transfer
 
@@ -147,28 +147,24 @@ Retrieval and the next workforce decision remain Act 3; Demo 4 ends at retention
 - Record that tests and deployment were not run in the destination; prior source
   verification is evidence of the original implementation only.
 
-## Contribution sequence
+## Completed contribution sequence
 
-After review, use three implementation commits plus an optional documentation
-integration commit, following the source's narrative boundaries:
+The destination contribution consists of these four commits, in narrative order:
 
-1. Campaign decision and Cowork integration, with shared Python scaffolding.
-2. Teams factory planning, its schema, Bicep, tests, and SDK dependency.
-3. Cosmos decision memory, toolkit dependency, capture schema and Explorer queries.
-4. Additive repository navigation/reference pages, if kept separate for review.
+1. `a560ae1`: Campaign decision and Cowork integration, with shared Python scaffolding.
+2. `f8b4407`: Teams factory planning, schema, Bicep, tests and SDK dependency.
+3. `29a3af9`: Cosmos memory, toolkit dependency, capture schema and Explorer queries.
+4. `eb3a464`: Repository navigation, setup and presenter guidance.
 
 Do not cherry-pick source commits at repository root: their paths and deployment
 configuration are incompatible with the destination's public structure. Import
 them under the component root and review the resulting contribution there.
 
-## Follow-up requiring owner approval
+## Remaining follow-up
 
-The current import is discoverable through this plan and the new direct links.
-After owners approve changes to authored pages, add links to `instructions/act2.md`
-and `docs/act2.md` in their respective indexes and the root contents table. Update
-the root infrastructure description to cover standalone Azure resources. Add
-the Act 2 voiceover/run-of-show to the existing delivery-resources README, clearly
-labeling the variant and preserving the original Fabric flow as a separate path.
+Navigation, setup documentation and the single presenter guide were updated with
+owner approval. [Session order](session-order.md) defines the canonical act/demo
+mapping. No additional navigation approval is pending.
 
 A later unification effort must select one numerical contract, update the relevant
 generators and expectations, revalidate both workloads, and re-record any affected
@@ -189,7 +185,7 @@ variables, required Tim/Karin deployment arguments, an ignored Cowork connection
 file, configurable memory models, and explicit proposal selection for capture
 verification. Fixed synthetic case/product/line data remains the tested variant.
 
-Static verification completed:
+Initial static verification completed before navigation edits and test authorization:
 
 - Parsed 30 Python source files without executing modules.
 - Parsed the connection JSON template, pyproject TOML and uv lockfile.
@@ -202,8 +198,8 @@ Static verification completed:
 - Confirmed credentials, local connection JSON, virtual environments and generated
   distributions are ignored.
 
-No dependency install, application test suite, Fabric generator, Azure deployment,
-commit or push was performed in the destination. Existing Act 1 behavior and
-generated-data hashes were preserved by leaving those files unchanged; this is not
-a claim that the relocated services were runtime-tested. A clean deployment and
-the opt-in integration checks remain the next review phase.
+Subsequently, dependencies were installed from the lockfile, local component tests
+and the existing Fabric validators passed, and the four commits above were created.
+No generator regeneration, Azure deployment, push or pull request was performed.
+The Fabric implementation and generated payload remained unchanged. Clean cloud
+deployment and the opt-in integration checks remain the next validation phase.
