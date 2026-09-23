@@ -8,6 +8,7 @@ dependencies = [
   "mcp>=1.26,<2",
   "psycopg[binary]>=3.2,<4",
   "PyJWT[crypto]>=2.10,<3",
+  "microsoft-teams-apps>=2,<3",
 ]
 
 [dependency-groups]
