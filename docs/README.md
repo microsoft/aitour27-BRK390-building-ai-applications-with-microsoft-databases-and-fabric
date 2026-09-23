@@ -37,6 +37,11 @@ remain explicit parts of the scenario.
 
 ## Reference map
 
+The [Act 2 architecture](act2.md) documents an additional standalone Azure variant
+and its numerical boundary with the frozen Fabric contract. Its marketing approval
+and production actions are writable, unlike the read-oriented analytical surfaces
+above. See the [integration plan](act2-integration-plan.md) for provenance and scope.
+
 - [Dataset contract, inventory, and stage-critical values](../data/README.md)
 - [Attendee deployment and demo guide](../instructions/README.md)
 - [Fabric data-agent definition](../src/fabric/CaldovaLaunch.DataAgent/README.md)

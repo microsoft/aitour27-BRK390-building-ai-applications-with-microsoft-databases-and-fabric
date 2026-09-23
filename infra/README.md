@@ -1,7 +1,9 @@
 # Infrastructure boundary
 
-This repository uses the root Bash and PowerShell scripts plus the Fabio CLI
-instead of publishing separate Bicep, Terraform, or ARM templates.
+The Fabric deployment uses the root Bash and PowerShell scripts plus the Fabio CLI.
+The standalone Act 2 variant also includes component-owned Bicep templates, indexed
+in [Act 2 infrastructure](act2/README.md). These are separate deployments and are
+not invoked by the root scripts.
 
 ## Resources
 

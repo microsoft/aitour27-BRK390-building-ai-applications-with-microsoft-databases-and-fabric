@@ -60,6 +60,50 @@ not switch to the outcome slice until the narrative calls for the reveal.
 
 ## Demo reproducibility
 
+### Standalone Act 2 recording variant
+
+The sequence above describes the original Fabric contract. The imported
+[Act 2 variant](../docs/act2.md) uses **USD 30,000 / 57,000 extra units**, **PKG-03**,
+and **MW-77 days 6–10**. Its production response preserves maintenance rather than
+deferring it. Do not describe those figures as the same case as the Fabric
+100,000-unit campaign and 57,920-unit shortfall.
+
+Prepare the variant using [Act 2 setup](../instructions/act2.md). Its recording order:
+
+1. **Demo 2 — Decide:** Tim asks Cowork for campaign guidance. Show the HorizonDB
+   evidence extraction, SQL scenario comparison and recommendation pipeline. Tim
+   approves the exact forecast; the system queues a production review for Karin.
+2. **Demo 3 — Act:** In a shared Teams thread, Karin asks the Factory Planning Agent
+   to preserve maintenance and existing orders. It proposes 22,800 units on PKG-01
+   days 6–10 and 34,200 on PKG-03 days 3–5. Karin approves the returned proposal ID.
+3. **Demo 4 — Remember:** Open the Cosmos case, source turns, toolkit summary and
+   facts. End with the distinction between approved plan and pending actual outcome.
+   Do not show recall in a new Teams conversation: that belongs to Act 3.
+
+Suggested narration connecting the technical views:
+
+> First, AI makes the evidence usable. SQL evaluates the options. Then AI explains
+> the recommendation. Tim approves the commercial commitment, and Karin confirms
+> a production response. Cosmos DB retains the decision and its context so the
+> organization owns what it learned.
+
+For the Cosmos shots:
+
+> The case record tells us what the business approved. The Agent Memory Toolkit
+> condenses the interaction into a summary and individual facts. These remain linked
+> to the decision and its source material. Actual production is still pending.
+
+Use the component [query walkthrough](../src/caldova-decisions/demo/README.md),
+[factory guide](../src/caldova-decisions/factory_agent/README.md), and
+[memory guide](../src/caldova-decisions/decision_memory/README.md). Run model checks
+before recording and keep the same case/evaluation IDs throughout. Shorten waits
+with a visible cut rather than implying instant model execution. Use fresh
+unapproved cases for rehearsal; approvals reserve capacity and must not be erased
+as an implicit reset. Local workers, HTTPS tunnels and signed-in browser sessions
+must remain running during delivery.
+
+### Fabric reproducibility commands
+
 From the repository root:
 
 ```bash

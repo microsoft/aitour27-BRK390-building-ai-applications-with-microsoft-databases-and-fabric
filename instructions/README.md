@@ -7,6 +7,11 @@ and governance requirements before execution.
 
 ## What you will deploy
 
+This page covers the Fabric deployment. For the standalone HorizonDB, Cowork,
+Teams agent, and Cosmos memory variant, follow [Act 2 instructions](act2.md).
+Review its [scenario boundary](../docs/act2.md) before combining the demos; the two
+paths have different campaign figures and production responses.
+
 The root scripts create or resolve these items:
 
 | Fabric item | Default name | Purpose |

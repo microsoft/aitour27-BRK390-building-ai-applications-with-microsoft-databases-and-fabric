@@ -22,6 +22,16 @@ with a reviewed, disposable workspace.
 
 ### Getting started
 
+#### Choose your demo path
+
+The [Fabric scenario](data/README.md) and the [standalone Act 2 variant](docs/act2.md)
+share the Caldova story but use different numerical contracts. Fabric uses a
+100,000-unit candidate campaign; the recorded Act 2 variant uses 57,000 additional
+units and preserves maintenance through a line split. Do not mix their expected
+answers. Follow [Act 2 setup](instructions/act2.md) for HorizonDB, Cowork, the Teams
+factory agent, and Azure Cosmos DB decision memory. The root Fabric scripts do not
+deploy these standalone Azure services.
+
 #### During the session
 
 1. Review the [scenario and data estate](data/README.md).
@@ -58,6 +68,9 @@ By the end of this session, you will be able to:
 | Cosmos DB for NoSQL in Fabric | Optionally stores writable decision-case documents. |
 | Caldova Insights | Fabric-embedded React and Rayfin application for the commercial dashboard and analyst assistant. |
 | Fabio CLI | Validates, deploys, loads, and verifies the Fabric demo estate. |
+| Azure HorizonDB and AI Pipelines | Evaluate and record the standalone Act 2 marketing and production decisions. |
+| Copilot Cowork and Microsoft Teams SDK | Provide agent-led marketing planning and Karin's factory planning conversation. |
+| Azure Cosmos DB and Agent Memory Toolkit | Retain the Act 2 decision, conversation, summaries, and facts; recall is reserved for Act 3. |
 
 ### Repository contents
 
@@ -66,6 +79,7 @@ By the end of this session, you will be able to:
 | [`data/`](data/README.md) | Deterministic synthetic dataset, generation tools, validation rules, and evaluation questions. |
 | [`src/fabric/`](src/fabric/) | Fabric ontology, semantic model, data-agent, and authored model source. |
 | [`src/caldova-insights/`](src/caldova-insights/README.md) | Fabric-embedded dashboard and analyst assistant. |
+| [`src/caldova-decisions/`](src/caldova-decisions/README.md) | Standalone Act 2 campaign, Teams production, and Cosmos memory implementations. |
 | [`instructions/`](instructions/README.md) | Public deployment, verification, and demo-running steps. |
 | [`docs/`](docs/README.md) | Architecture, boundaries, and links to component references. |
 | [`infra/`](infra/README.md) | Resources created by the deployment scripts and the infrastructure boundary. |
