@@ -289,7 +289,7 @@ requires-dist = [
     { name = "fastapi", specifier = ">=0.115,<1" },
     { name = "mcp", specifier = ">=1.26,<2" },
     { name = "microsoft-teams-apps", specifier = ">=2,<3" },
-    { name = "prompty", specifier = "==2.0.0a9" },
+    { name = "prompty", specifier = "==2.0.0b2" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.2,<4" },
     { name = "pyjwt", extras = ["crypto"], specifier = ">=2.10,<3" },
     { name = "uvicorn", specifier = ">=0.34,<1" },
@@ -1505,15 +1505,15 @@ wheels = [
 
 [[package]]
 name = "prompty"
-version = "2.0.0a9"
+version = "2.0.0b2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiofiles" },
     { name = "pyyaml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/86/b7/c26f2994af3a742147bdf34f753b5044c78d31acc7baae4f294dd299a956/prompty-2.0.0a9.tar.gz", hash = "sha256:aaf034f63b145600a0c987a54969ef163eeb6156b4d27261c90655d508ddba3f", size = 243578, upload-time = "2026-04-13T19:50:03.037Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/87/37/1b24bcd272fc2133bac0dd5aa0347cb1ae6acd67c208cac20f9eb3d4a8f6/prompty-2.0.0b2.tar.gz", hash = "sha256:f4a33691ebd72247acf240497ce3a5da1712d54300eba6d8585d774d15817e0e", size = 12257950, upload-time = "2026-06-06T05:03:32.488Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/31/5d/8898ad46e7593fc728b0fd975d145abc84a900dfa86c5f101c37c9887231/prompty-2.0.0a9-py3-none-any.whl", hash = "sha256:315fcf639939595b1c0221a71edbfd38b8ce5e577a41285f923e6698e8682f7c", size = 99418, upload-time = "2026-04-13T19:50:01.465Z" },
+    { url = "https://files.pythonhosted.org/packages/b1/a3/8a42a1ca10574ce9ed0793deb14d5c3cebe1e7e363cee56da935bb7acbf6/prompty-2.0.0b2-py3-none-any.whl", hash = "sha256:1a0acce85587e06ba20ceeb1ab57dd3b22223f92a94b426e5e4a6031815cca03", size = 172280, upload-time = "2026-06-06T05:03:30.48Z" },
 ]
 
 [[package]]

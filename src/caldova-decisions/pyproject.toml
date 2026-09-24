@@ -10,7 +10,7 @@ dependencies = [
   "PyJWT[crypto]>=2.10,<3",
   "microsoft-teams-apps>=2,<3",
   "azure-cosmos-agent-memory==0.3.0b2",
-  "prompty==2.0.0a9", # Toolkit prompt format is incompatible with prompty 2.0.2.
+  "prompty==2.0.0b2", # Toolkit prompt format is incompatible with prompty 2.0.2.
 ]
 
 [dependency-groups]
