@@ -1,0 +1,10 @@
+EVALUATE
+SUMMARIZECOLUMNS(
+    'CampaignSignals'[campaignId],
+    'CampaignSignals'[regionId],
+    "Spend USD", [Campaign Spend USD],
+    "Attributed Units", [Campaign Attributed Units],
+    "Attributed Revenue USD", [Campaign Revenue USD],
+    "Margin Pct", [Campaign Contribution Margin %]
+)
+ORDER BY [Attributed Revenue USD] DESC

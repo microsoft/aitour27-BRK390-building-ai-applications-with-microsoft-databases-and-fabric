@@ -1,0 +1,27 @@
+id: caldova-insights
+name: caldova-insights
+version: 1.0.0
+services:
+  auth:
+    enabled: true
+    fabric:
+      enabled: true
+    allowedRedirectUris:
+      - http://localhost:5173
+      - http://127.0.0.1:5173
+  data:
+    enabled: false
+  storage:
+    enabled: false
+  staticHosting:
+    enabled: true
+    assetAccess: protected
+    folder: dist
+    buildCommand: npm run build:fabric
+    indexDocument: index.html
+  functions:
+    enabled: true
+    buildCommand: npm run build
+secrets:
+  - name: DATA_AGENT_MCP_URL
+    description: MCP endpoint of the published CaldovaAnalyst data agent. Per-workspace, so it is deployment configuration rather than source. Read it with `fabio data-agent mcp-url --workspace <workspace-id> --id <agent-id>`.

@@ -1,0 +1,9 @@
+{
+  "tenant_id": "YOUR_ENTRA_TENANT_ID",
+  "api_client_id": "YOUR_API_CLIENT_ID",
+  "oauth_client_id": "YOUR_CONNECTOR_CLIENT_ID",
+  "oauth_vault_reference": "YOUR_M365_OAUTH_REGISTRATION_ID",
+  "base_url": "https://YOUR_HTTPS_HOST",
+  "tunnel_id": "YOUR_TUNNEL_ID",
+  "scope": "api://YOUR_API_CLIENT_ID/Campaign.Access offline_access"
+}

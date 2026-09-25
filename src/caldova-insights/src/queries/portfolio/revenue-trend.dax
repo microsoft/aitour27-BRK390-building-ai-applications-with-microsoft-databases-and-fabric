@@ -1,0 +1,10 @@
+// Daily revenue by product category. Categories keep the series count low
+// enough to stay readable while still covering the entire catalogue.
+EVALUATE
+SUMMARIZECOLUMNS(
+    'sales_order_lines'[orderDate],
+    'products'[category],
+    "Revenue USD", [Total Revenue USD],
+    "Units", [Total Units]
+)
+ORDER BY 'sales_order_lines'[orderDate], 'products'[category]

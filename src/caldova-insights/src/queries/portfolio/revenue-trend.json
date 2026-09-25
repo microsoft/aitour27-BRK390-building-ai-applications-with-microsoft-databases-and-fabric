@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 230,
+  "mark": {
+    "type": "area",
+    "line": { "strokeWidth": 1 },
+    "interpolate": "monotone"
+  },
+  "encoding": {
+    "x": {
+      "field": "orderDate",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "format": "%b",
+        "labelAngle": 0,
+        "tickCount": 7,
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "revenueUsd",
+      "type": "quantitative",
+      "title": "Revenue (USD)",
+      "stack": "zero",
+      "axis": {
+        "format": "$~s",
+        "tickCount": 5
+      }
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "title": null,
+      "legend": {
+        "orient": "top",
+        "direction": "horizontal",
+        "symbolType": "square"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "orderDate",
+        "type": "temporal",
+        "title": "Date",
+        "format": "%d %b %Y"
+      },
+      {
+        "field": "category",
+        "type": "nominal",
+        "title": "Category"
+      },
+      {
+        "field": "revenueUsd",
+        "type": "quantitative",
+        "title": "Revenue",
+        "format": "$,.0f"
+      },
+      {
+        "field": "units",
+        "type": "quantitative",
+        "title": "Units",
+        "format": ",.0f"
+      }
+    ]
+  }
+}

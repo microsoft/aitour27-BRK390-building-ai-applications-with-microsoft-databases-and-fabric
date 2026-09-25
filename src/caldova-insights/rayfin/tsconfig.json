@@ -1,0 +1,24 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": ".temp/compiled",
+    "rootDir": ".",
+    "strict": true,
+    "composite": true,
+    "declaration": true,
+    "allowImportingTsExtensions": false,
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "noEmit": false,
+    "sourceMap": true
+  },
+  "include": [
+    "data/**/*"
+  ],
+  "exclude": [
+    "functions/**/*",
+    ".temp/**/*",
+    "dist",
+    "node_modules"
+  ]
+}
