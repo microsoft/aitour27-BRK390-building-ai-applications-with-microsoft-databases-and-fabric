@@ -1,0 +1,48 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Caldova governed production actions",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/v1/act3/snapshot": {
+      "get": {
+        "operationId": "getProductionConflict",
+        "responses": { "200": { "description": "Scenario-derived conflict and options" } }
+      }
+    },
+    "/v1/actions/production-plan": {
+      "post": {
+        "operationId": "applyProductionPlan",
+        "security": [{ "managedIdentity": [] }],
+        "responses": {
+          "200": { "description": "Correlated production receipt" },
+          "403": { "description": "Verified approval claims missing" }
+        }
+      }
+    },
+    "/v1/actions/maintenance-deferral": {
+      "post": {
+        "operationId": "deferMaintenance",
+        "security": [{ "managedIdentity": [] }],
+        "responses": {
+          "200": { "description": "Correlated maintenance receipt" },
+          "403": { "description": "Verified approval claims missing" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "managedIdentity": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token",
+            "scopes": {}
+          }
+        }
+      }
+    }
+  }
+}

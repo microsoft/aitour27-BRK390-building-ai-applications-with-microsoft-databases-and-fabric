@@ -5,7 +5,7 @@ application surfaces in one governed Fabric scenario.
 
 ## Solution flow
 
-1. The deterministic contract in
+1. The deterministic scenario in
    [`data/scenario.json`](../data/scenario.json) generates the fictional Caldova
    estate.
 2. [`create-data.sh`](../create-data.sh) and
@@ -40,17 +40,18 @@ remain explicit parts of the scenario.
 - [Canonical session order, acts, and demo numbering](session-order.md)
 
 The [Act 2 architecture](act2.md) documents an additional standalone Azure variant
-and its numerical boundary with the frozen Fabric contract. Its marketing approval
+and the expected values that differ from the Fabric dataset. Its marketing approval
 and production actions are writable, unlike the read-oriented analytical surfaces
 above. See the [integration plan](act2-integration-plan.md) for provenance and scope.
 
-- [Dataset contract, inventory, and stage-critical values](../data/README.md)
+- [Act 3 workforce decision architecture](act3.md)
+- [Dataset inventory and stage-critical values](../data/README.md)
 - [Attendee deployment and demo guide](../instructions/README.md)
 - [Fabric data-agent definition](../src/fabric/CaldovaLaunch.DataAgent/README.md)
 - [Fabric ontology definition](../src/fabric/CaldovaLaunch.Ontology/README.md)
 - [Direct Lake semantic model](../src/fabric/CaldovaLaunch.SemanticModel/README.md)
 - [Caldova Insights application](../src/caldova-insights/README.md)
-- [Infrastructure boundary](../infra/README.md)
+- [Infrastructure requirements](../infra/README.md)
 
 All business data is synthetic and fictional. Do not add tenant exports,
 credentials, customer data, or deployment state to this repository.

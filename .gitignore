@@ -427,3 +427,20 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# BRK390 Act 3 local dependencies, configuration, packages, and evidence.
+build/
+tmp/
+.azure/
+.prep/
+.env
+.env.*
+!.env.example
+local.settings.json
+.venv/
+*.py[cod]
+*.har
+*.webm
+*.mp4
+test-results/
+playwright-report/

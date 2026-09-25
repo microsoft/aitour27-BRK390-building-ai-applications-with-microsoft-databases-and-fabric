@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caldova | Production Review</title>
+  <link rel="stylesheet" href="/api/assets/staffing.css?v=20260915-blocked-status">
+  <script defer src="/api/assets/msal.js"></script>
+  <script defer src="/api/assets/lucide.js"></script>
+  <script defer src="/api/assets/staffing.js?v=20260917-v3-sync"></script>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="/api/staffing-app">Caldova<span>OPERATIONS</span></a><div class="account"><span id="account-name"></span><button id="signin"><i data-lucide="log-in"></i>Sign in</button></div></header>
+  <div id="rehearsal" class="rehearsal" hidden>Local rehearsal identity</div>
+  <div class="workspace">
+    <aside class="rail"><div class="rail-label">PRODUCTION</div><nav aria-label="Workspace"><button class="nav active" data-view="review" aria-current="page"><i data-lucide="clipboard-check"></i>Production review</button><button class="nav" data-view="sources"><i data-lucide="book-open"></i>Sources</button><button class="nav" data-view="receipts"><i data-lucide="history"></i>Approvals</button></nav><div class="rail-source"><img src="/api/assets/sql.png" alt="Azure SQL Database" width="32" height="32"><span>Azure SQL Database<br><small id="connection">Sign-in required</small></span></div></aside>
+    <main>
+      <div id="message" role="status" aria-live="polite" hidden></div>
+      <section id="signedout"><h1>Production review</h1><button id="signin-main" class="primary"><i data-lucide="log-in"></i>Sign in</button></section>
+      <div id="signedin" hidden>
+        <div class="page-top"><h1 id="page-title" tabindex="-1">Production review</h1><div class="page-actions"><span id="case-status" class="status"></span><button id="refresh" class="icon" title="Refresh case" aria-label="Refresh case"><i data-lucide="refresh-cw"></i></button></div></div>
+        <p id="planning-date" class="provenance"></p>
+        <section id="view-review">
+          <section class="current-facts" aria-labelledby="facts-title"><div class="section-title"><h2 id="facts-title">Current records</h2><span>Azure SQL Database</span></div><div class="incident"><i data-lucide="factory"></i><div><strong id="product-name"></strong><p id="incident-text"></p></div></div><div class="metrics" id="metrics"></div><div id="demand-warning" class="demand-warning" role="status" hidden><i data-lucide="triangle-alert" aria-hidden="true"></i><div><strong id="shortfall-label"></strong><span id="shortfall-detail"></span></div></div><p id="readiness" class="muted"></p></section>
+          <section class="memory-search"><form id="analysis-form"><label for="question">Production question</label><div class="query-controls"><textarea id="question" rows="2" maxlength="2000" minlength="3" required>How can we cover committed demand while protecting published shifts?</textarea><button id="assess" class="primary" type="submit"><i data-lucide="search"></i>Assess staffing</button></div></form><p id="analysis-state" role="status" aria-live="polite">Not assessed.</p></section>
+          <section id="assessment-results" hidden aria-busy="false" tabindex="-1" aria-labelledby="results-title">
+            <div class="section-title results-heading"><h2 id="results-title">Assessment results</h2></div>
+            <p id="capacity-state" role="status"></p>
+            <div id="conclusion" hidden>
+              <div class="decision-comparison">
+                <section aria-labelledby="lesson-title"><div class="section-title"><h3 id="lesson-title">Prior decision</h3><span id="lesson-origin"></span></div><p id="lesson-action"></p><p id="lesson-finding" hidden></p><p id="lesson-productivity"></p></section>
+                <section id="constraint-card" aria-labelledby="constraint-title"><div class="section-title"><h3 id="constraint-title">Current constraints</h3><span>Azure SQL Database</span></div><div class="constraint-outcome"><p id="current-option"></p><span id="current-eligibility" class="status"></span></div><p id="current-constraint"></p></section>
+              </div>
+              <div class="eligible-result"><div class="conclusion-title"><h3 id="result-option"></h3><span id="result-eligibility" class="status"></span></div><p id="result-output"></p><p id="result-coverage"></p><p id="result-reason"></p><p id="result-source-state" class="muted"></p><div class="result-actions"><button data-view="sources"><i data-lucide="book-open"></i>Open decision</button><button data-view="receipts"><i data-lucide="clipboard-check"></i>Approvals</button></div></div>
+            </div>
+            <section id="option-comparison" aria-labelledby="options-title"><div id="capacity-results" hidden><h3 id="options-title">Compare staffing options</h3><div class="table-wrap" tabindex="0" role="region" aria-label="Calculated staffing options"><table><thead><tr><th scope="col">Option</th><th scope="col">Added packers</th><th scope="col">Projected output</th><th scope="col">SQL eligibility</th></tr></thead><tbody id="options"></tbody></table></div><details><summary>Calculation details</summary><p id="capacity-summary"></p><div class="capacity-track" aria-hidden="true"><div id="capacity-fill"></div></div><p id="model-label"></p><p id="calendar-details"></p><button data-inspect="snapshot"><i data-lucide="code-xml"></i>Inspect SQL calculation</button></details></div></section>
+            <details><summary>Assessment context</summary><p id="assessed-question" class="muted"></p><p id="assessed-at" class="muted"></p></details>
+          </section>
+        </section>
+        <section id="view-sources" hidden>
+          <div class="section-title"><h2>Current records</h2><span>Azure SQL Database</span></div><details><summary>Dataset provenance</summary><p id="dataset-details"></p></details>
+          <section id="policies-section" aria-labelledby="policies-title"><div class="section-title"><h2 id="policies-title">Policy matches</h2><span>Azure SQL Database</span></div><p id="policy-state" role="status">Not assessed.</p><div id="policy-results"></div><details id="policy-query" hidden><summary>Policy query</summary><button data-inspect="policies"><i data-lucide="code-xml"></i>Inspect query</button></details></section>
+          <section id="findings" aria-labelledby="decision-title"><div class="section-title"><h2 id="decision-title">Retained decision</h2><span id="memory-origin"></span></div><p id="memory-state" role="status">Not assessed.</p><div id="memory-results" hidden><div class="memory-cards"><article><h3>Earlier action</h3><p id="prior-action"></p><p id="source-details">Not assessed.</p></article><article><h3>Retained lesson</h3><p id="memory-finding"></p></article><article><h3>Colleague vacations</h3><p id="workforce-priority"></p></article></div><button id="inspect-memory"><i data-lucide="database"></i>Inspect source</button></div></section>
+        </section>
+        <section id="view-receipts" hidden>
+          <p id="approval-review-state">Assess staffing before submitting a plan.</p>
+          <section id="decision" class="decision" hidden><div class="section-title"><h2>Staffing plan</h2><span id="proposal-state"></span></div><p id="proposal-details"></p><button id="propose" class="primary" disabled><i data-lucide="send"></i>Submit for approval</button><div class="approval-actions"><button id="approve-operations" disabled><i data-lucide="factory"></i>Approve operations</button><button id="approve-hr" disabled><i data-lucide="users-round"></i>Approve HR</button></div><p id="approval-state"></p></section>
+          <div class="section-title"><h2>Approval receipts</h2><span>Azure SQL Database</span></div><div id="receipts"></div><button data-inspect="approve"><i data-lucide="code-xml"></i>Inspect approval procedure</button>
+        </section>
+        <footer><span id="case-label"></span><span>Karin Blair / Factory supervisor</span></footer>
+      </div>
+    </main>
+  </div>
+  <dialog id="inspector" aria-labelledby="inspector-title"><header class="query-header"><h2 id="inspector-title">Source inspection</h2><button id="close-inspector" class="icon" title="Close inspector" aria-label="Close inspector"><i data-lucide="x"></i></button></header><div id="inspector-body"></div></dialog>
+</body>
+</html>

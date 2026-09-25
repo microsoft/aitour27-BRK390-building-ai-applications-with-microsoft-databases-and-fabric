@@ -1,0 +1,48 @@
+{
+  "name": "caldova-brk390-runtime",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/act3/functions.mjs",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "npm run demo:package",
+    "start": "node src/act3/server.ts",
+    "publish:decision-signal": "node src/act3/decision-signal-publisher.ts",
+    "test": "node --test src/act3/*.test.ts scripts/act3/*.test.mjs scripts/*.test.mjs",
+    "test:browser": "playwright test",
+    "demo:scenario": "node scripts/act3/build-staffing-scenario.mjs",
+    "demo:check": "node --env-file=.env scripts/act3/setup.mjs --check",
+    "demo:seed": "node --env-file=.env scripts/act3/setup.mjs --seed",
+    "demo:memory": "node scripts/act3/prepare-staffing-memory.mjs",
+    "demo:session": "node scripts/act3/prepare-staffing-session.mjs",
+    "demo:scenario:check": "node scripts/act3/build-staffing-scenario.mjs --check",
+    "demo:prepare": "npm test && npm run demo:scenario:check && npm run demo:memory && npm run demo:session -- --case-id SESSION-local-preview && npm run demo:check && npm run demo:package",
+    "demo:package": "node scripts/act3/build-package.mjs",
+    "demo:preflight": "node --env-file=.env scripts/act3/preflight-staffing.mjs",
+    "demo:auth-check": "node --env-file=.env scripts/act3/verify-auth-redirect.mjs",
+    "security:publication": "node scripts/check-publication.mjs",
+    "security:demo": "node scripts/check-publication.mjs --base origin/main"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^4.10.0",
+    "@azure/functions": "^4.16.2",
+    "@azure/identity": "^4.11.1",
+    "@azure/msal-browser": "^5.21.0",
+    "azure-kusto-data": "^7.0.1",
+    "jose": "^6.1.0",
+    "lucide": "^1.42.0",
+    "mssql": "^12.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/mssql": "^9.1.8"
+  },
+  "overrides": {
+    "azure-kusto-data": {
+      "uuid": "11.1.1"
+    }
+  }
+}

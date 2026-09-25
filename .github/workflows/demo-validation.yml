@@ -1,0 +1,31 @@
+name: Demo validation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run demo:scenario:check
+      - run: npm run demo:memory
+      - run: npm run demo:session -- --case-id SESSION-ci-preview
+      - run: npm run security:demo
+      - run: npm run demo:package
+      - run: npm install --global azure-functions-core-tools@4.6.0 --unsafe-perm true
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+      - run: npm audit --audit-level=moderate

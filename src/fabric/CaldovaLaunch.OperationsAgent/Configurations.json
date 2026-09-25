@@ -1,0 +1,11 @@
+{
+  "configuration": {
+    "instructions": "Monitor ProductionDecisionSignals as the authoritative stream of precomputed production decisions. Treat caseId as the business object identifier and observedAt as the event timestamp. When requiresDecision becomes true, notify the configured Teams destination with the caseId, lineId, shortfallUnits, recommendedOptionId, recommendationSummary, productionApproverRole, and maintenanceApproverRole. State that production-plan and maintenance approvals are completed separately in the Caldova Production Guardian application. Recommend the supplied recommendedOptionId exactly; do not calculate another option or invoke an action.",
+    "dataSources": {
+      "productionDecisionSignals": "$(/Caldova Demo/Caldova Resources/CaldovaSignals)"
+    },
+    "actions": {}
+  },
+  "playbook": {},
+  "shouldRun": true
+}

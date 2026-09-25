@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 3,
+  "dataClass": "authored_follow_on_scenario",
+  "provenance": {
+    "narrative": "synthetic_colleague_narrative",
+    "extensionSchemaVersion": 3,
+    "source": "src/act3/staffing-extension.json",
+    "originalDatasetUnchanged": true,
+    "description": "Owner-authorized fictional Act 2 reassignment and retained productivity lesson, followed by committed December demand and Southern Hemisphere summer holiday protection. Not an observed maintenance-deferral outcome."
+  },
+  "dataset": {
+    "sha256": "513f81681971eea1a6aec6e6bec145ba12894c599f2beb6eb2fd8da8ba016c34",
+    "asOf": "2026-08-03",
+    "sourceCaseId": "CASE-2026-HS-001",
+    "sourceDecisionAt": "2026-08-10T09:05:00.000Z",
+    "sourceResolvedAt": "2026-10-05T16:40:00Z",
+    "productId": "PROD-HS-100",
+    "productName": "Hydration Sunscreen",
+    "supervisor": {
+      "personaId": "PERSONA-KARIN",
+      "displayName": "Karin Blair",
+      "title": "Factory Supervisor",
+      "roleId": "ROLE-OPERATIONS-APPROVER",
+      "act": 3
+    },
+    "operatingDates": [
+      "2026-12-14",
+      "2026-12-15",
+      "2026-12-16",
+      "2026-12-17",
+      "2026-12-18",
+      "2026-12-19",
+      "2026-12-21",
+      "2026-12-22",
+      "2026-12-23",
+      "2026-12-24",
+      "2026-12-25",
+      "2026-12-26"
+    ],
+    "memoryStatus": "owner_authorized_colleague_scenario",
+    "assumptions": [
+      "The December demand uplift, staffing availability and productivity model are new follow-on scenario inputs, not observations in the August dataset.",
+      "The 21-day rule covers changes to existing published shifts and line assignments; a separate policy permits qualified temporary staff on unchanged shifts.",
+      "The staffing ceiling conservatively uses the shared dataset's planned daily output. The model does not authorize exceeding the shared production envelope.",
+      "The owner selected the colleague's staffing narrative: the earlier fictional decision reassigned workers and retained the staffing productivity lesson. This versioned narrative is not evidence of the original maintenance-deferral execution and does not overwrite its record.",
+      "The owner's latest speaker notes retain December and Southern Hemisphere summer holidays, superseding the colleague brief's nine-month interval. The notice period is a current SQL policy, not a learned rule in Cosmos DB."
+    ]
+  },
+  "case": {
+    "caseId": "CASE-STAFFING-20261210-V3",
+    "title": "Hydration Sunscreen: Southern Hemisphere summer staffing review",
+    "factoryId": "PLANT-02",
+    "lineId": "PKG-02",
+    "scenarioAsOf": "2026-12-10T09:00:00.000Z",
+    "windowStart": "2026-12-13T06:00:00.000Z",
+    "windowEnd": "2026-12-27T06:00:00.000Z",
+    "demandUnits": 227360,
+    "dailyOutput": 17280,
+    "baseWorkers": 10,
+    "extraWorkers": 2,
+    "gainPerWorker": 0.08,
+    "maxExtraWorkers": 2,
+    "machineDailyLimit": 19440,
+    "temporaryAvailable": 2,
+    "qualified": true,
+    "onboardingReadyAt": "2026-12-12T06:00:00.000Z",
+    "modelVersion": "packing-v2",
+    "memoryId": "CASE-2026-HS-001-staffing-v3",
+    "memoryPartition": "CASE-2026-HS-001",
+    "operatingDates": [
+      "2026-12-14",
+      "2026-12-15",
+      "2026-12-16",
+      "2026-12-17",
+      "2026-12-18",
+      "2026-12-19",
+      "2026-12-21",
+      "2026-12-22",
+      "2026-12-23",
+      "2026-12-24",
+      "2026-12-25",
+      "2026-12-26"
+    ],
+    "datasetContext": {
+      "sourceHash": "513f81681971eea1a6aec6e6bec145ba12894c599f2beb6eb2fd8da8ba016c34",
+      "productId": "PROD-HS-100",
+      "productName": "Hydration Sunscreen",
+      "sourceCaseId": "CASE-2026-HS-001",
+      "sourceDecisionAt": "2026-08-10T09:05:00.000Z"
+    }
+  },
+  "policies": [
+    {
+      "policyVersion": "2.1",
+      "factoryId": "PLANT-02",
+      "validFrom": "2026-01-01T00:00:00Z",
+      "validUntil": "2027-01-01T00:00:00Z",
+      "status": "approved",
+      "policyId": "POL-SHIFT-NOTICE",
+      "lineId": null,
+      "title": "Published shift protection",
+      "body": "Existing employees require 21 days of notice before published shift or line-assignment changes. Qualified temporary assignments on unchanged shifts are evaluated under the separate temporary staffing policy.",
+      "ruleType": "schedule_notice",
+      "noticeDays": 21,
+      "allowNewAssignments": null
+    },
+    {
+      "policyVersion": "2.1",
+      "factoryId": "PLANT-02",
+      "validFrom": "2026-01-01T00:00:00Z",
+      "validUntil": "2027-01-01T00:00:00Z",
+      "status": "approved",
+      "policyId": "POL-TEMP-PACKING",
+      "lineId": "PKG-02",
+      "title": "Qualified temporary packing assignments",
+      "body": "Qualified temporary packers may join unchanged shifts when availability and onboarding are confirmed before production. Staffing must stay inside the line-specific model and production ceiling. Operations and HR must approve the same current plan.",
+      "ruleType": "temporary_staffing",
+      "noticeDays": null,
+      "allowNewAssignments": true
+    }
+  ],
+  "rehearsalMemory": {
+    "schemaVersion": 3,
+    "dataClass": "synthetic_colleague_narrative",
+    "id": "CASE-2026-HS-001-staffing-v3",
+    "caseId": "CASE-2026-HS-001",
+    "recordedAt": "2026-10-05T16:40:00Z",
+    "author": "Karin Blair",
+    "lesson": "End-of-line throughput was people-bound. Additional qualified packers increased daily output according to the line staffing model, within the production ceiling.",
+    "priorAction": "Existing qualified workers were reassigned between lines to support the proposed campaign.",
+    "workforcePriority": "Protect colleagues' holiday plans and give people advance notice of changes to their published shifts.",
+    "productivity": {
+      "gainPerWorker": 0.08,
+      "maxExtraWorkers": 2
+    },
+    "lineId": "PKG-02",
+    "bottleneck": "end-of-line-packing",
+    "modelVersion": "packing-v2"
+  },
+  "expected": {
+    "productionDays": 12,
+    "baselineUnits": 207360,
+    "shortfallUnits": 20000,
+    "staffedUnits": 233280
+  }
+}

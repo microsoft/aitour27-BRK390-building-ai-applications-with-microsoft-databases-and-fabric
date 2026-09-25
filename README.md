@@ -27,13 +27,14 @@ with a reviewed, disposable workspace.
 **Act 1:** Demo 1, see and understand demand. **Act 2:** Demo 2, marketing approval;
 Demo 3, production response in Teams; Demo 4, retain decision memory. **Act 3:**
 reuse that memory for the next workforce decision with current policy and capacity.
-See [session order and numbering](docs/session-order.md). The Act 3 workforce
-implementation is not included in this Act 2 import.
+See [session order and numbering](docs/session-order.md). The portable Act 3
+workforce application, setup scripts, tests, and Azure deployment steps are in
+[`src/act3/`](src/act3/README.md).
 
 #### Choose your demo path
 
 The [Fabric scenario](data/README.md) and the [standalone Act 2 variant](docs/act2.md)
-share the Caldova story but use different numerical contracts. Fabric uses a
+share the Caldova story but use different expected values. Fabric uses a
 100,000-unit candidate campaign; the recorded Act 2 variant uses 57,000 additional
 units and preserves maintenance through a line split. Do not mix their expected
 answers. Follow [Act 2 setup](instructions/act2.md) for HorizonDB, Cowork, the Teams
@@ -54,7 +55,10 @@ deploy these standalone Azure services.
    CLI.
 2. Prepare an empty or disposable Microsoft Fabric workspace where you can
    create and load the required item types.
-3. Follow the complete [deployment and demo guide](instructions/README.md).
+3. Follow the complete [Fabric deployment and demo guide](instructions/README.md).
+4. For Act 3, follow the [staffing demo guide](instructions/act3.md). It covers
+   configuration, validation, seeding, deployment, and rehearsal against the
+   Azure resources used by the demo.
 
 ### Learning outcomes
 
@@ -88,9 +92,10 @@ By the end of this session, you will be able to:
 | [`src/fabric/`](src/fabric/) | Fabric ontology, semantic model, data-agent, and authored model source. |
 | [`src/caldova-insights/`](src/caldova-insights/README.md) | Fabric-embedded dashboard and analyst assistant. |
 | [`src/caldova-decisions/`](src/caldova-decisions/README.md) | Standalone Act 2 campaign, Teams production, and Cosmos memory implementations. |
+| [`src/act3/`](src/act3/README.md) | Act 3 staffing application, Azure SQL runtime, and browser experience. |
 | [`instructions/`](instructions/README.md) | Public deployment, verification, and demo-running steps. |
-| [`docs/`](docs/README.md) | Architecture, boundaries, and links to component references. |
-| [`infra/`](infra/README.md) | Resources created by the deployment scripts and the infrastructure boundary. |
+| [`docs/`](docs/README.md) | Architecture and component references. |
+| [`infra/`](infra/README.md) | Fabric and Azure resource requirements. |
 | [`delivery-resources/`](delivery-resources/README.md) | Presenter preflight, reset, fallback, and re-delivery guidance. |
 
 ### Continue your learning
