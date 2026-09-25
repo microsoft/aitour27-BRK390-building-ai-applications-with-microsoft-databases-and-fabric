@@ -122,9 +122,12 @@ assistant section above.
 ```bash
 cp fabric.example.yaml fabric.yaml   # first checkout only
 npm install
+npm audit --audit-level=low
 npm run lint
 npm test
 npm run build
+npm --prefix rayfin/functions ci
+npm --prefix rayfin/functions audit --audit-level=low
 npm --prefix rayfin/functions run build
 ```
 
