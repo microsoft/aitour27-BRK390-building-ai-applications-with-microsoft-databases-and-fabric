@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caldova | Operations Review</title>
+  <link rel="stylesheet" href="/api/assets/app.css?v=20260908-inspector">
+  <script defer src="/api/assets/msal.js"></script>
+  <script defer src="/api/assets/lucide.js"></script>
+  <script defer src="/api/assets/app.js?v=20260909-auth-bridge"></script>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="/api/app">Caldova<span>OPERATIONS</span></a><div class="account"><span id="account-name"></span><button id="signin"><i data-lucide="log-in"></i>Sign in</button></div></header>
+  <div class="workspace">
+    <aside class="rail"><div class="rail-label">LAUNCH CONTROL</div><nav aria-label="Workspace"><button class="nav active" data-view="review"><i data-lucide="clipboard-check"></i>Case review</button><button class="nav" data-view="memory"><i data-lucide="book-open"></i>Decision memory</button><button class="nav" data-view="receipts"><i data-lucide="history"></i>Receipts</button></nav><div class="rail-source"><img src="/api/assets/sql.png" alt="Azure SQL Database" width="32" height="32"><span>Azure SQL Database<br><small id="connection">Sign-in required</small></span></div></aside>
+    <main>
+      <div id="message" role="status" aria-live="polite" hidden></div>
+      <section id="signedout"><div class="eyebrow">OPERATIONS REVIEW</div><h1>Production decisions,<br>with the evidence attached.</h1><p>Caldova launch operations</p><button id="signin-main" class="primary"><i data-lucide="log-in"></i>Sign in</button></section>
+      <div id="signedin" hidden>
+        <div class="page-top"><div><div class="eyebrow" id="case-label"></div><h1 id="page-title">Production review</h1></div><div class="page-actions"><span id="case-status" class="status"></span><button id="refresh" class="icon" title="Refresh case" aria-label="Refresh case"><i data-lucide="refresh-cw"></i></button></div></div>
+        <div class="provenance" id="provenance"></div>
+        <section id="view-review">
+          <div class="incident"><i data-lucide="bell-ring"></i><div><strong>Production capacity alert</strong><p id="incident-text"></p></div><span class="incident-origin">Staged notification</span></div>
+          <div class="metrics" id="metrics"></div>
+          <button type="button" class="inspect-query" data-inspect="review/snapshot" data-title="Production case" data-projection="The case metrics are projected from the conflict fields in the shared snapshot response."><i data-lucide="code-xml"></i>Inspect query</button>
+          <section class="memory-search"><div class="section-title"><h2>Remember</h2><span>Approved policies and published lessons</span></div><form id="search-form"><label class="sr-only" for="question">Search decision memory</label><input id="question" maxlength="2000" value="Can we postpone maintenance by running the packaging line more slowly?" required><button class="primary" type="submit"><i data-lucide="search"></i>Retrieve</button></form><div id="search-results"></div></section>
+          <section class="option-section"><div class="section-title"><h2>Review the options</h2><span>Current policy checks</span></div><div class="table-wrap"><table><thead><tr><th scope="col">Production option</th><th scope="col">Rate / utilisation</th><th scope="col">Delivery</th><th scope="col">Maintenance</th></tr></thead><tbody id="options"></tbody></table></div><button type="button" class="inspect-query" data-inspect="review/snapshot" data-title="Production options" data-projection="Options and advisory policy checks come from the shared snapshot response. These rows are not a separate SQL query."><i data-lucide="code-xml"></i>Inspect query</button></section>
+          <section id="decision" class="decision"><div class="section-title"><h2>Authorization</h2><span id="selected-name"></span></div><div id="decision-details"></div><div class="approval-actions"><button id="approve-operations"><i data-lucide="factory"></i>Approve operations</button><button id="approve-maintenance"><i data-lucide="wrench"></i>Approve maintenance</button></div><div id="approval-state"></div></section>
+          <button type="button" class="inspect-query" data-inspect="review/snapshot" data-title="Authorization state" data-projection="The selected option, recorded plan and approval count are displayed from the shared snapshot response. Write responses are available in Receipts."><i data-lucide="code-xml"></i>Inspect query</button>
+        </section>
+        <section id="view-memory" hidden><div class="section-title"><h2>Improve</h2><span id="memory-count"></span></div><div id="guidance-list"></div><button type="button" class="inspect-query" data-inspect="review/snapshot" data-title="Decision memory" data-projection="The guidance collection, including drafts, comes from the shared snapshot response. This is not the approved-only vector search."><i data-lucide="code-xml"></i>Inspect query</button><section class="lesson-editor"><h2>Record a lesson</h2><form id="lesson-form"><label for="lesson-title">Title</label><input id="lesson-title" maxlength="200" required><label for="lesson-text">Lesson</label><textarea id="lesson-text" rows="5" minlength="20" maxlength="1800" required></textarea><button type="submit" id="save-draft" class="primary"><i data-lucide="save"></i>Save draft</button></form></section></section>
+        <section id="view-receipts" hidden><div class="section-title"><h2>Decision receipts</h2><span>Recorded in Azure SQL</span></div><div id="receipts"></div><button type="button" class="inspect-query" data-inspect="review/snapshot" data-title="Decision receipts" data-projection="Recorded approvals come from the shared snapshot response. Latest write responses below are retained only for this page session."><i data-lucide="code-xml"></i>Inspect query</button><div id="operation-receipts"></div></section>
+        <footer><span id="source-hash"></span><span>Dedicated demo environment</span></footer>
+      </div>
+    </main>
+  </div>
+  <dialog id="query-inspector" aria-labelledby="query-title">
+    <header class="query-header"><h2 id="query-title">SQL query</h2><button type="button" class="icon" id="close-query" aria-label="Close query inspector" title="Close query inspector" autofocus><i data-lucide="x"></i></button></header>
+    <div id="query-content" aria-live="polite"></div>
+  </dialog>
+</body>
+</html>

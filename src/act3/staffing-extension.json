@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 3,
+  "dataClass": "authored_follow_on_scenario",
+  "demandAboveBaselineUnits": 20000,
+  "baseWorkers": 10,
+  "extraWorkers": 2,
+  "gainPerWorker": 0.08,
+  "maxExtraWorkers": 2,
+  "temporaryAvailable": 2,
+  "qualified": true,
+  "noticeDays": 21,
+  "modelVersion": "packing-v2",
+  "memoryStatus": "owner_authorized_colleague_scenario",
+  "priorAction": "Existing qualified workers were reassigned between lines to support the proposed campaign.",
+  "packingObservation": "End-of-line throughput was people-bound. Additional qualified packers increased daily output according to the line staffing model, within the production ceiling.",
+  "workforcePriority": "Protect colleagues' holiday plans and give people advance notice of changes to their published shifts.",
+  "assumptions": [
+    "The December demand uplift, staffing availability and productivity model are new follow-on scenario inputs, not observations in the August dataset.",
+    "The 21-day rule covers changes to existing published shifts and line assignments; a separate policy permits qualified temporary staff on unchanged shifts.",
+    "The staffing ceiling conservatively uses the shared dataset's planned daily output. The model does not authorize exceeding the shared production envelope.",
+    "The owner selected the colleague's staffing narrative: the earlier fictional decision reassigned workers and retained the staffing productivity lesson. This versioned narrative is not evidence of the original maintenance-deferral execution and does not overwrite its record.",
+    "The owner's latest speaker notes retain December and Southern Hemisphere summer holidays, superseding the colleague brief's nine-month interval. The notice period is a current SQL policy, not a learned rule in Cosmos DB."
+  ]
+}

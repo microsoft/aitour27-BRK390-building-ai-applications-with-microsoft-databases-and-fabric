@@ -12,6 +12,10 @@ Teams agent, and Cosmos memory variant, follow [Act 2 instructions](act2.md).
 Review its [scenario boundary](../docs/act2.md) before combining the demos; the two
 paths have different campaign figures and production responses.
 
+Act 3 is a separate Azure-hosted staffing application that reuses retained
+decision memory for a new workforce case. Follow the
+[Act 3 instructions](act3.md) to configure, seed, deploy, and rehearse it.
+
 The root scripts create or resolve these items:
 
 | Fabric item | Default name | Purpose |

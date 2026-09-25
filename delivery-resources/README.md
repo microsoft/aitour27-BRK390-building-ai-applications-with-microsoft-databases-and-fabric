@@ -55,8 +55,8 @@ the [session-order reference](../docs/session-order.md) for act/demo terminology
 4. **Act 2 / Demo 4 — Remember:** show the decision case and toolkit-derived memory
    in Cosmos DB. End at retention with actual production outcome pending.
 5. **Act 3 — Improve:** retrieve prior experience for the next workforce decision
-   and check it against current Azure SQL policy and capacity. This later
-   implementation is not part of the imported Act 2 component.
+   and check it against current Azure SQL policy and capacity. Follow the
+   [Act 3 presenter instructions](../instructions/act3.md).
 
 The Fabric default data stops before hero approval. Its optional outcome and
 retrieval slices are dataset examples, not evidence of the standalone Act 2
@@ -126,6 +126,7 @@ Use the component READMEs for deeper recovery:
 - [Ontology](../src/fabric/CaldovaLaunch.Ontology/README.md)
 - [Semantic model](../src/fabric/CaldovaLaunch.SemanticModel/README.md)
 - [Caldova Insights](../src/caldova-insights/README.md)
+- [Act 3 workforce decision](../src/act3/README.md)
 
 ## Setup notes
 

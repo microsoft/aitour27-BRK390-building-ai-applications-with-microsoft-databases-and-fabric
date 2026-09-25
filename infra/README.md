@@ -1,9 +1,10 @@
-# Infrastructure boundary
+# Infrastructure requirements
 
 The Fabric deployment uses the root Bash and PowerShell scripts plus the Fabio CLI.
 The standalone Act 2 variant also includes component-owned Bicep templates, indexed
 in [Act 2 infrastructure](act2/README.md). These are separate deployments and are
-not invoked by the root scripts.
+not invoked by the root scripts. The Azure resources used by Act 3 are listed in
+[Act 3 infrastructure](act3/README.md).
 
 ## Resources
 

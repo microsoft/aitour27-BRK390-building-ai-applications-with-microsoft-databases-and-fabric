@@ -15,8 +15,8 @@
     "ROLE-KNOWLEDGE-STEWARD"
   ],
   "deploymentBoundary": "Deploys into Microsoft Fabric using the fabio CLI (0.70.0+ for non-production ring endpoints, 0.71.0+ for the Cosmos DB data plane). Fabric SQL Database is the Azure SQL Database engine hosted as a Fabric item. With --with-cosmos a Fabric-native Cosmos DB for NoSQL database is provisioned and the decision-case documents are imported into it. Azure HorizonDB has no Fabric-native item and is not provisioned. The Fabric Ontology item format is TMDL; the ontology authored under src/fabric is in the legacy JSON layout and does not yet deploy.",
-  "fileCount": 94,
-  "totalBytes": 8416152,
+  "fileCount": 95,
+  "totalBytes": 8427353,
   "files": [
     {
       "path": "data/evaluation/expected-results.json",
@@ -147,6 +147,11 @@
       "path": "data/fabric-sql/007_bridge_schema.sql",
       "bytes": 966,
       "sha256": "267dd841c0412bc6bca3f922fed2f11f018c7ebbda3a4b5f71686741f1b39669"
+    },
+    {
+      "path": "data/fabric-sql/008_governed_action_runtime.sql",
+      "bytes": 11201,
+      "sha256": "3d64c6cd8466dc2ca3fbff61723da48920c335dc59767c69013ea204d9b7736f"
     },
     {
       "path": "data/fabric-sql/action_receipts.csv",

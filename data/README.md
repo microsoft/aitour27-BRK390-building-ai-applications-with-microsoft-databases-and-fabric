@@ -11,12 +11,12 @@ All records are synthetic and fictional. Caldova is not a real company, and this
 
 | Area | Verified state |
 | --- | --- |
-| Validator | `cd data && node tools/validate.ts` reports `310 passed, 0 failed`. It streams CSV/JSONL, transparently reads `.gz`, checks structure, referential integrity, narrative invariants, payload cleanliness, evaluation consistency, ontology bindings, Direct Lake semantic model metadata, decision-memory tables, agent evidence projections, the data agent definition, and manifest path-set consistency, and exits non-zero on failure. |
-| Manifest | `cd data && node tools/manifest.ts --check` reports `PASS manifest.json matches 91 files on disk.` `data/manifest.json` records 91 deployable files and 8,284,729 payload bytes, about 7.9 MiB. |
+| Validator | `cd data && node tools/validate.ts` reports `322 passed, 0 failed`. It streams CSV/JSONL, transparently reads `.gz`, checks structure, referential integrity, narrative invariants, payload cleanliness, evaluation consistency, ontology bindings, Direct Lake semantic model metadata, decision-memory tables, agent evidence projections, the data agent definition, and manifest path-set consistency, and exits non-zero on failure. |
+| Manifest | `cd data && node tools/manifest.ts --check` reports `PASS manifest.json matches 95 files on disk.` `data/manifest.json` records 95 deployable files and 8,427,353 payload bytes, about 8.0 MiB. |
 | As-of snapshot | The default payload is a snapshot as of `clock.asOf = 2026-08-03`. Observed facts, transactions, telemetry, executed actions, receipts, recorded outcomes, and resolved-case facts do not appear after that boundary. |
-| Reproducibility | Manifest path-set validation passes for the current 91-file payload set generated from `schemaVersion` `3.0.0` and `generatorSeed` `20270607`. |
+| Reproducibility | Manifest path-set validation passes for the current 95-file payload set generated from `schemaVersion` `3.0.0` and `generatorSeed` `20270607`. |
 | Lakehouse analytics | Deployment loads 42 Fabric SQL payload tables and 11 Eventhouse CSV tables as 53 analytical Delta tables, plus 7 `dash_`-prefixed dashboard tables and 5 narrative evidence tables, for Fabric IQ ontology bindings, the Direct Lake semantic model, and the data agent. |
-| Stored payload footprint | The committed manifest payload is 8,284,729 bytes. A local `data/` directory can be much larger after expansion because `.staging/` holds uncompressed deployment copies. |
+| Stored payload footprint | The committed manifest payload is 8,427,353 bytes. A local `data/` directory can be much larger after expansion because `.staging/` holds uncompressed deployment copies. |
 
 ## The as-of boundary and outcome slice
 
@@ -319,7 +319,7 @@ node tools/generate.ts --no-pack
 node tools/validate.ts
 ```
 
-The validator streams CSV/JSONL data, transparently reads gzipped payloads, validates structure and primary keys, checks foreign keys and cross-file references, verifies narrative invariants, enforces payload cleanliness, checks evaluation expectations and retrieval probes, validates ontology bindings, validates Direct Lake semantic model metadata, checks decision-memory relational consistency, and confirms the manifest path set. The validated default-slice result is `310 passed, 0 failed`; any failed check exits non-zero.
+The validator streams CSV/JSONL data, transparently reads gzipped payloads, validates structure and primary keys, checks foreign keys and cross-file references, verifies narrative invariants, enforces payload cleanliness, checks evaluation expectations and retrieval probes, validates ontology bindings, validates Direct Lake semantic model metadata, checks decision-memory relational consistency, and confirms the manifest path set. The validated default-slice result is `322 passed, 0 failed`; any failed check exits non-zero.
 
 ### Refresh and check the manifest
 
