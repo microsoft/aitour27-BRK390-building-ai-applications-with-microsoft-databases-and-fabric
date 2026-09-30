@@ -6,7 +6,7 @@ Presenter, re-delivery, and train-the-trainer materials for this session.
 
 | Item | Link | Notes |
 |---|---|---|
-| Delivery deck | [English](https://aka.ms/aitour27/BRK390/slides/en) | Required URL |
+| Delivery deck | coming soon | Required URL |
 | Attendee landing page | [Session README](../README.md) | Public starting point |
 | Post-event attendee guidance | [Instructions](../instructions/README.md) | To be added later |
 | Deployment and demo guide | [Attendee instructions](../instructions/README.md) | Public Fabric setup, verification, app deployment, and cleanup |
