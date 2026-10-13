@@ -105,6 +105,7 @@ Pick your next step based on your learning style:
 | Resource | What you'll get |
 |----------|-----------------|
 | **[Session Recording](https://aka.ms/aitour27/BRK390/youtube)** | A recording of session BRK390 by the session creator |
+| Slides: **[English](https://aka.ms/aitour27/BRK390/slides/en)** | Session slides for BRK390. More languages coming soon! |
 | **[Microsoft Learn](https://learn.microsoft.com)** | Official documentation and guided learning paths on these topics |
 | **[AI Tour 2027 Resource Center](https://aka.ms/aitour27-resource-center)** | Additional session repos and materials from AI Tour 2027 |
 | **[Microsoft Foundry Community](https://aka.ms/MicrosoftFoundryDiscord-AITour27)** | Connect with other learners and experts in our Discord community |
