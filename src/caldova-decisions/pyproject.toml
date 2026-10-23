@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["pytest>=8,<10", "httpx>=0.28,<1", "jsonschema>=4.23,<5", "pillow>=11,<13"]
+dev = ["pytest>=8,<10", "httpx>=0.28,<1", "jsonschema>=4.23,<5", "pillow>=13.0.0,<14"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
