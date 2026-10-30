@@ -105,7 +105,7 @@ Pick your next step based on your learning style:
 | Resource | What you'll get |
 |----------|-----------------|
 | **[Session Recording](https://aka.ms/ft27/brk390/youtube)** | A recording of session BRK390 by the session creator |
-| Slides: **[English](https://aka.ms/ft27/brk390/slides/en)** \| **[German](https://aka.ms/ft27/brk390/slides/de)** | Session slides for BRK390 |
+| **[English](https://aka.ms/ft27/brk390/slides/en)** \| **[German](https://aka.ms/ft27/brk390/slides/de)** \| **[Spanish](https://aka.ms/ft27/brk390/slides/es)** | Session slides for BRK390 |
 | **[Microsoft Learn](https://learn.microsoft.com)** | Official documentation and guided learning paths on these topics |
 | **[Frontier Tour 2027 Resource Center](https://aka.ms/FrontierTour27)** | Additional session repos and materials from Frontier Tour 2027 |
 | **[Microsoft Foundry Community](https://aka.ms/MicrosoftFoundryDiscord-ft27)** | Connect with other learners and experts in our Discord community |

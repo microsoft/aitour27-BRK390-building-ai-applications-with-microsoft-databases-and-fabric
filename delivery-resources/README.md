@@ -6,7 +6,7 @@ Presenter, re-delivery, and train-the-trainer materials for this session.
 
 | Item | Link | Notes |
 |---|---|---|
-| Delivery deck | Slides: [English](https://aka.ms/ft27/brk390/slides/en) \| [German](https://aka.ms/ft27/brk390/slides/de) | The session slides |
+| Delivery deck | [English](https://aka.ms/ft27/brk390/slides/en) \| [German](https://aka.ms/ft27/brk390/slides/de) \| [Spanish](https://aka.ms/ft27/brk390/slides/es) | Session slides |
 | Attendee landing page | [Session README](../README.md) | Public starting point |
 | Post-event attendee guidance | [Instructions](../instructions/README.md) | To be added later |
 | Deployment and demo guide | [Attendee instructions](../instructions/README.md) | Public Fabric setup, verification, app deployment, and cleanup |
